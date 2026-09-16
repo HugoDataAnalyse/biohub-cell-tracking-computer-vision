@@ -1,16 +1,19 @@
-Overview
-This repository contains the complete documentation, code, and workflow used for spatio-temporal cell tracking. The approach is optimized for high-accuracy volumetric tracking, robust cell division handling, and missing-frame interpolation.
+🔬 Suivi cellulaire spatio-temporel (3D + Temps)
 
-Key Features
-End-to-End Workflow: Volumetric preprocessing, multi-GPU parallel inference shards, and graph post-processing.
+Documentation, code et workflow complets pour l'analyse de données biomédicales.→ Segmentation volumétrique haute précision et interpolation des images manquantes.
 
-Ensemble & Consensus Strategy: Dual-seed consensus with adaptive edge and detection weighting to stabilize predictions.
+🧬 Stratégie d'ensemble & Consensus
 
-Geometric Refinement & Gap Closing: Advanced post-processing techniques to bridge missing frames, filter short tracks, and geometrically adjust cell divisions.
+Stabilisation des prédictions par fusion de modèles.→ Consensus à double germe (dual-seed) avec pondération adaptative des contours et des détections.
 
-Architecture
-3D UNet: For precise volumetric cell detection and segmentation.
+📐 Raffinement géométrique & Suivi de trajectoires
+Post-process avancé pour la reconstruction des lignées cellulaires.→ Correction des divisions, filtrage des trajectoires courtes et pontage des sauts d'images (gap closing).
 
-Node-Transformer: To model long-range spatio-temporal dependencies between cell nodes across frames.
+🧠 Détection volumétrique par Deep Learning (3D UNet)
+Modélisation de l'architecture cellulaire en trois dimensions.→ Segmentation et localisation ultra-précises des cellules dans l'espace volumétrique.
 
-Integer Linear Programming (ILP): Global graph resolution enforcing strict biological and physical tracking constraints.
+🕸️ Modélisation des dépendances (Node-Transformer)
+Analyse des relations à long terme entre les cellules à travers le temps.→ Capture des interactions spatio-temporelles complexes entre les nœuds cellulaires.
+
+🔢 Résolution globale du graphe (ILP)
+Optimisation mathématique du suivi par programmation linéaire en nombres entiers.→ Application stricte des contraintes biologiques et physiques du mouvement cellulaire.
